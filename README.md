@@ -84,6 +84,13 @@ Install the YANG modules:
 $ sudo ./load.sh
 ```
 
+Note: At this point o-ran-shared-cell.yang always fails, as it requires a missing YANG module o-ran-common-yang-types.yang. Just ignore the message for now.
+
+Check that the O-RAN modules are installed and found in the sysrepo module list:
+```
+$ sudo sysrepoctl -l
+```
+
 ## Netopeer2 installation
 
 Install netopeer2
@@ -105,10 +112,6 @@ Test if the installation was successful:
 ```
 $ netopeer2-server -h
 ```
-Check that sysrepo is correctly installed and that the O-RAN modules are installed:
-```
-$ sudo sysrepoctl -l
-```
 
 ## Start netopeer2
 
@@ -121,7 +124,7 @@ $ sudo netopeer2-server -d -v3
 Open another terminal in the /o-ran-netopeer2 directory and run the netopeer2 client with:
 
 ```
-$ netopeer2-cli
+$ sudo netopeer2-cli
 
 > connect
 ```

@@ -26,7 +26,7 @@
                             <client-authentication>
                                 <supported-authentication-methods>
                                     <publickey/>
-                                    <passsword/>
+                                    <password/>
                                     <other>interactive</other>
                                 </supported-authentication-methods>
                                 <users/>
@@ -41,11 +41,3 @@
         </netconf-client>
     </call-home>
 </netconf-server>
-<users xmlns="urn:o-ran:user-mgmt:1.0">
-    <user>
-        <name>netconf</name>
-        <account-type>PASSWORD</account-type>
-        <password>!netconf</password>
-        <enabled>true</enabled>
-    </user>
-</users>
