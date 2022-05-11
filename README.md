@@ -13,9 +13,7 @@ $ sudo apt-get install git cmake build-essential bison flex libpcre3-dev libev-d
 libssh
 
 ```
-$ git clone https://git.libssh.org/projects/libssh.git/
-
-
+$ sudo apt-get install libssh-4 libssh-dev libssh2-1-dev libssh2-1
 ```
 
 Set up server folder at root:
@@ -61,16 +59,27 @@ $ cd ..
 
 ## O-RAN YANG modules
 
+Clone the repository
 
+```
+$ git clone https://github.com/Antti-EP/o-ran-netopeer2.git
+$ cd o-ran-netopeer2
+```
 
+Install the YANG modules:
 
+```
+$ sudo ./load.sh
+```
 
-
-
+## Netopeer2 installation
 
 Install netopeer2
 
 ```
+$ sudo -i
+$ cd NetConfServer
+
 $ git clone https://github.com/CESNET/netopeer2.git
 $ cd netopeer2
 $ mkdir build && cd build && cmake ..
@@ -78,4 +87,55 @@ $ make
 $ make install
 $ cd ..
 ```
+
+Test if the installation was successful:
+```
+$ netopeer2-server -h
+```
+Check that sysrepo is correctly installed and that the O-RAN modules are installed:
+```
+$ sysrepoctl -l
+```
+
+## Start netopeer2
+
+Start the netopeer2 server: (If you don't want the verbosity, remove -d -v3)
+
+```
+$ sudo netopeer2-server -d -v3
+```
+
+Open another terminal in the /o-ran-netopeer2 directory and run the netopeer2 client with:
+
+```
+$ netopeer2-cli
+
+> connect
+```
+
+Test the connection:
+
+```
+> get-config --source running
+```
+
+Should return a config XML 
+
+## Enable SSH Call Home
+
+```
+> edit-config --target running --
+``
+
+
+
+
+
+
+
+
+
+
+
+
 

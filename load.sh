@@ -1,3 +1,4 @@
+cd O-RAN.WG4.MP-YANGs-v08.00/
 cd Imported\ Models/
 sysrepoctl -i iana-hardware.yang
 sysrepoctl -i iana-if-type.yang
@@ -72,3 +73,5 @@ cd Radio/
 sysrepoctl -i o-ran-beamforming.yang
 cd ..
 cd ..
+cd ..
+
