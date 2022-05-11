@@ -1,6 +1,6 @@
 cd O-RAN.WG4.MP-YANGs-v08.00/
 cd Imported\ Models/
-sysrepoctl -i ietf-yang-types.yang
+#sysrepoctl -i ietf-yang-types.yang
 sysrepoctl -i ietf-interfaces.yang
 sysrepoctl -i iana-hardware.yang
 sysrepoctl -i iana-if-type.yang
@@ -8,7 +8,7 @@ sysrepoctl -i ietf-crypto-types.yang
 #sysrepoctl -i ietf-datastores.yang
 sysrepoctl -i ietf-dhcpv6-types.yang
 sysrepoctl -i ietf-hardware.yang
-sysrepoctl -i ietf-inet-types.yang
+#sysrepoctl -i ietf-inet-types.yang
 sysrepoctl -i ietf-ip.yang
 #sysrepoctl -i ietf-netconf-acm.yang
 sysrepoctl -i ietf-netconf-monitoring.yang

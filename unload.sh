@@ -36,14 +36,14 @@ sysrepoctl -u o-ran-interfaces
 sysrepoctl -u iana-hardware
 sysrepoctl -u iana-if-type
 sysrepoctl -u ietf-crypto-types
-sysrepoctl -u ietf-inet-types
+#sysrepoctl -u ietf-inet-types
 sysrepoctl -u ietf-netconf-monitoring
 sysrepoctl -u ietf-restconf
 #sysrepoctl -u ietf-yang-schema-mount
 #sysrepoctl -u ietf-yang-types
-sysrepoctl -u ietf-yang-library
-sysrepoctl -u ietf-network-instance
+#sysrepoctl -u ietf-yang-library
 sysrepoctl -u ietf-subscribed-notifications
+sysrepoctl -u ietf-network-instance
 sysrepoctl -u ietf-ip
 sysrepoctl -u ietf-interfaces
 #sysrepoctl -u ietf-netconf-acm
