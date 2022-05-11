@@ -10,10 +10,10 @@ $ sudo apt-get update
 $ sudo apt-get install git cmake build-essential bison flex libpcre3-dev libev-dev libavl-dev libprotobuf-c-dev protobuf-c-compiler swig python3-dev lua5.2 pkg-config libpcre++-dev openssl libssl-dev libcrypto++-dev zlib1g-dev
 ```
 
-libssh
+libssh and libpcre2
 
 ```
-$ sudo apt-get install libssh-4 libssh-dev libssh2-1-dev libssh2-1
+$ sudo apt-get install libssh-4 libssh-dev libssh2-1-dev libssh2-1 libpcre2-dev
 ```
 
 Set up server folder at root:
@@ -29,10 +29,11 @@ Install libyang
 ```
 $ git clone https://github.com/CESNET/libyang.git
 $ cd libyang
-$ mkdir build && cd build && cmake ..
+$ mkdir build && cd build 
+$ cmake ..
 $ make
 $ make install
-$ cd ..
+$ cd ../..
 ```
 
 Install sysrepo
@@ -40,10 +41,11 @@ Install sysrepo
 ```
 $ git clone https://github.com/sysrepo/sysrepo.git
 $ cd sysrepo
-$ mkdir build && cd build && cmake ..
+$ mkdir build && cd build 
+$ cmake ..
 $ make
 $ make install
-$ cd ..
+$ cd ../..
 ```
 
 Install libnetconf2
@@ -51,15 +53,25 @@ Install libnetconf2
 ```
 $ git clone https://github.com/CESNET/libnetconf2.git
 $ cd libnetconf2
-$ mkdir build && cd build && cmake ..
+$ mkdir build && cd build 
+$ cmake ..
 $ make
 $ make install
-$ cd ..
+$ cd ../..
+```
+
+## Testing
+
+Run ldconfig and test if sysrepo is correctly installed:
+
+```
+$ ldconfig
+$ sysrepocfg -h
 ```
 
 ## O-RAN YANG modules
 
-Clone the repository
+Clone the repository (Not necessarily into root)
 
 ```
 $ git clone https://github.com/Antti-EP/o-ran-netopeer2.git
@@ -82,10 +94,11 @@ $ cd NetConfServer
 
 $ git clone https://github.com/CESNET/netopeer2.git
 $ cd netopeer2
-$ mkdir build && cd build && cmake ..
+$ mkdir build && cd build 
+$ cmake ..
 $ make
 $ make install
-$ cd ..
+$ cd ../..
 ```
 
 Test if the installation was successful:
@@ -94,7 +107,7 @@ $ netopeer2-server -h
 ```
 Check that sysrepo is correctly installed and that the O-RAN modules are installed:
 ```
-$ sysrepoctl -l
+$ sudo sysrepoctl -l
 ```
 
 ## Start netopeer2
