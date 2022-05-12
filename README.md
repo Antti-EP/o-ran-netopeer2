@@ -85,6 +85,8 @@ $ ./load.sh
 ```
 
 Note: At this point o-ran-shared-cell.yang always fails, as it requires a missing YANG module o-ran-common-yang-types.yang. Just ignore the message for now.
+If you encounter "[ERR] Shared memory version mismatch (9, expected 10), remove the SHM to fix.", restart linux and try again.
+
 
 Check that the O-RAN modules are installed and found in the sysrepo module list:
 ```
