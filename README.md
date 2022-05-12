@@ -71,7 +71,7 @@ $ sysrepocfg -h
 
 ## O-RAN YANG modules
 
-Clone the repository (Not necessarily into root)
+Clone the repository
 
 ```
 $ git clone https://github.com/Antti-EP/o-ran-netopeer2.git
@@ -81,14 +81,14 @@ $ cd o-ran-netopeer2
 Install the YANG modules:
 
 ```
-$ sudo ./load.sh
+$ ./load.sh
 ```
 
 Note: At this point o-ran-shared-cell.yang always fails, as it requires a missing YANG module o-ran-common-yang-types.yang. Just ignore the message for now.
 
 Check that the O-RAN modules are installed and found in the sysrepo module list:
 ```
-$ sudo sysrepoctl -l
+$ sysrepoctl -l
 ```
 
 ## Netopeer2 installation
@@ -96,9 +96,7 @@ $ sudo sysrepoctl -l
 Install netopeer2
 
 ```
-$ sudo -i
-$ cd NetConfServer
-
+$ cd ..
 $ git clone https://github.com/CESNET/netopeer2.git
 $ cd netopeer2
 $ mkdir build && cd build 
@@ -118,16 +116,21 @@ $ netopeer2-server -h
 Start the netopeer2 server: (If you don't want the verbosity, remove -d -v3)
 
 ```
-$ sudo netopeer2-server -d -v3
+$ netopeer2-server -d -v3
 ```
 
 Open another terminal in the /o-ran-netopeer2 directory and run the netopeer2 client with:
 
 ```
-$ sudo netopeer2-cli
+$ sudo -i
+$ cd o-ran-netopeer2
+$ netopeer2-cli
 
 > connect
 ```
+
+If you get the "Unable to authenticate to the remote server" while trying to connect as root, you might need to change your root password.
+(https://github.com/CESNET/Netopeer2/issues/453)
 
 Test the connection:
 
