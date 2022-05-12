@@ -126,7 +126,7 @@ Open another terminal in the /o-ran-netopeer2 directory and run the netopeer2 cl
 
 ```
 $ sudo -i
-$ cd o-ran-netopeer2
+$ cd NetConfServer/o-ran-netopeer2
 $ netopeer2-cli
 
 > connect
