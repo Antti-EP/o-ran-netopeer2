@@ -153,8 +153,27 @@ Test if Call Home works:
 > listen
 ```
 
+## Test RPC 
 
+Open another terminal to run the test RPC subscriber.
 
+```
+sudo -i
+cd NetConfServer/o-ran-netopeer2/test
+./rpc_sub /o-ran-operations:reset
+```
+
+In the netopeer2-cli terminal, run:
+
+```
+user-rpc --content test/rpc.xml
+```
+
+The test server should return "OK" and the subscriber terminal should show:
+
+```
+ ========= RPC "/o-ran-operations:reset" RECEIVED: =======================
+```
 
 
 
