@@ -143,10 +143,15 @@ Should return a config XML
 ## Enable SSH Call Home
 
 ```
-> edit-config --target running --
-``
+> edit-config --target running --config=ssh_callhome.xml
+```
 
+Test if Call Home works:
 
+```
+> disconnect
+> listen
+```
 
 
 
