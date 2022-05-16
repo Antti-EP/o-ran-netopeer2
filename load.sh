@@ -4,7 +4,8 @@ cd Imported\ Models/
 sysrepoctl -i ietf-interfaces.yang
 sysrepoctl -i iana-hardware.yang
 sysrepoctl -i iana-if-type.yang
-sysrepoctl -U ietf-crypto-types.yang
+sysrepoctl -u ietf-crypto-types
+sysrepoctl -i ietf-crypto-types.yang
 #sysrepoctl -i ietf-datastores.yang
 sysrepoctl -i ietf-dhcpv6-types.yang
 sysrepoctl -i ietf-hardware.yang
