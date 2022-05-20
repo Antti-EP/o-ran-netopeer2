@@ -1,5 +1,16 @@
 # Installing Netopeer2 with O-RAN YANG modules
 
+
+HOX! Installer script can be found in Teams O-RAN Study team files.
+It does all the steps below up to "Start Netopeer2".
+
+
+
+
+
+
+
+
 This was done on Ubuntu 22.04 LTS
 
 
