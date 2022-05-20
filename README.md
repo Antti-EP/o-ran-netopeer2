@@ -127,7 +127,7 @@ Test if the installation was successful:
 $ netopeer2-server -h
 ```
 
-### Use and configuration
+# Use and configuration
 
 ## Start netopeer2
 
