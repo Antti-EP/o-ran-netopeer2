@@ -77,3 +77,5 @@ cd ..
 cd ..
 sysrepocfg --edit=ssh_callhome.xml
 sysrepocfg --edit=nacm.xml
+
+exit 0

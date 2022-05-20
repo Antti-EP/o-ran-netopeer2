@@ -50,3 +50,5 @@ sysrepoctl -u ietf-interfaces
 sysrepoctl -u ietf-dhcpv6-types
 #sysrepoctl -u ietf-datastores
 sysrepoctl -u ietf-hardware
+
+exit 0
