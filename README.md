@@ -1,6 +1,8 @@
 # Installing Netopeer2 with O-RAN YANG modules
 
 
+## Installer
+
 HOX! Installer script can be found in Teams O-RAN Study team files.
 It does all the steps below up to "Start Netopeer2" and can be run from anywhere.
 
@@ -124,6 +126,8 @@ Test if the installation was successful:
 ```
 $ netopeer2-server -h
 ```
+
+### Use and configuration
 
 ## Start netopeer2
 
