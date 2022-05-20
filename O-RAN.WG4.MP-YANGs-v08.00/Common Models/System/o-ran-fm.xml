@@ -1,0 +1,18 @@
+<nacm xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-acm">
+	<rule-list>
+		<name>fm-acl</name>
+		<group>sudo</group>
+		<group>smo</group>
+		<group>fm-pm</group>
+		<group>smo</group>
+		<group>hybrid-odu</group>
+		<rule>
+			<name>allow-fm</name>
+			<module-name>o-ran-fan</module-name>
+			<access-operations>
+				read exec
+			</access-operations>
+			<action>permit</action>
+		</rule>
+	</rule-list>
+</nacm>

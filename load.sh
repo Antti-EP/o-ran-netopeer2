@@ -25,7 +25,7 @@ sysrepoctl -i o-ran-wg4-features.yang
 sysrepoctl -i o-ran-fan.yang
 sysrepoctl -i o-ran-fm.yang
 sysrepoctl -i o-ran-hardware.yang
-sysrepoctl -i o-ran-supervision.yang
+sysrepoctl -i o-ran-supervision.yang #-I o-ran-supervision.xml
 sysrepoctl -i o-ran-usermgmt.yang -I user_data.xml
 sysrepoctl -i o-ran-ves-subscribed-notifications.yang
 cd ..
@@ -75,4 +75,5 @@ sysrepoctl -i o-ran-beamforming.yang
 cd ..
 cd ..
 cd ..
-
+sysrepocfg --edit=ssh_callhome.xml
+sysrepocfg --edit=nacm.xml

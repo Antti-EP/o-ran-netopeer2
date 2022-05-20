@@ -1,0 +1,12 @@
+<nacm xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-acm">
+	<rule-list>
+		<name>subscribed-notifications-full-acl</name>
+		<group>smo</group>
+		<rule>
+			<name>allow-subscribed-notifications</name>
+			<module-name>o-ran-subscribed-notifications</module-name>
+			<access-operations>*</access-operations>
+			<action>permit</action>
+		</rule>
+	</rule-list>
+</nacm>

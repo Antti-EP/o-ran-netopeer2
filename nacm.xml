@@ -1,0 +1,35 @@
+<nacm xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-acm">
+	<groups>
+		<group>
+			<name>sudo</name>
+			<user-name>root</user-name>
+			<user-name>admin</user-name>
+		</group>
+
+		<group>
+			<name>smo</name>
+			<user-name>smo</user-name>
+		</group>
+
+		<group>
+			<name>hybrid-odu</name>
+			<user-name>hybrid-odu</user-name>
+		</group>
+		
+		<group>
+			<name>fm-pm</name>
+			<user-name>fm-pm</user-name>
+		</group>
+
+		<group>
+			<name>swm</name>
+			<user-name>swm</user-name>
+		</group>
+		
+		<group>
+			<name>nms</name>
+			<user-name>nms</user-name>
+		</group>
+	</groups>
+</nacm>
+

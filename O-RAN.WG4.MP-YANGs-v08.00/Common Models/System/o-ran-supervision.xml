@@ -1,0 +1,34 @@
+<nacm xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-acm">
+	<rule-list>
+		<name>supervision-full-acl</name>
+		<group>sudo</group>
+		<group>hybrid-odu</group>
+		<rule>
+			<name>allow-supervision</name>
+			<module-name>o-ran-supervision</module-name>
+			<access-operations>*</access-operations>
+			<action>permit</action>
+		</rule>
+	</rule-list>
+
+	<rule-list>
+		<name>supervision-smo-acl</name>
+		<group>smo</group>
+		<rule>
+			<name>allow-supervision-smo</name>
+			<module-name>o-ran-supervision</module-name>
+			<access-operations>
+				read write
+			</access-operations>
+			<action>permit</action>
+		</rule>
+		<rule>
+			<name>deny-cu-plane-monitoring</name>
+			<path xmlns:n="urn:o-ran:supervision:1.0">
+				/n:supervision/cu-plane-monitoring
+			</path>
+			<access-operations>write</access-operations>
+			<action>deny</action>
+		</rule>
+	</rule-list>
+</nacm>

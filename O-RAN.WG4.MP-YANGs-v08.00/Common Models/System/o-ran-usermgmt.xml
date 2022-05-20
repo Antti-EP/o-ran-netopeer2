@@ -1,0 +1,41 @@
+<users xmlns="urn:o-ran:user-mgmt:1.0">
+    <user>
+        <name>netconf</name>
+        <account-type>PASSWORD</account-type>
+        <enabled>true</enabled>
+    </user>
+</users>
+<nacm xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-acm">
+	<rule-list>
+		<name>user-mgmt-full-acl</name>
+		<group>sudo</group>
+		<group>smo</group>
+		<group>hybrid-odu</group>
+		<rule>
+			<name>allow-user-mgmt</name>
+			<module-name>o-ran-user-mgmt</module-name>
+			<access-operations>*</access-operations>
+			<action>permit</action>
+		</rule>
+		<rule>
+			<name>deny-password</name>
+			<path xmlns:n="urn:o-ran:user-mgmt:1.0">
+				/n:users/n:user/n:password
+			</path>
+			<access-operations>read</access-operations>
+			<action>deny</action>
+		</rule>
+	</rule-list>
+	<rule-list>
+		<name>user-mgmt-deny-password-acl</name>
+		<group>*</group>
+		<rule>
+			<name>deny-password</name>
+			<path xmlns:n="urn:o-ran:user-mgmt:1.0">
+				/n:users/n:user/n:password
+			</path>
+			<access-operations>read</access-operations>
+			<action>deny</action>
+		</rule>
+	</rule-list>
+</nacm>
