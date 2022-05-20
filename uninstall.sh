@@ -1,18 +1,18 @@
-if [ "$EUID" -ne 0 ]
+#!/bin/bash
+set -e
+
+if [ "$EUID" -ne 0 ];
   then echo "Please run as root"
   exit
 fi
 
-sudo -i
-cd NetConfServer
+cd /root/NetConfServer
 
 cd o-ran-netopeer2
+set +e
 ./unload.sh
-if [$? -ne 0]
-then
-	echo "An error occurred unloading YANG modules"
-	exit 3
-fi
+set -e
+cd ..
 
 cd netopeer2/scripts
 ./remove.sh
@@ -36,5 +36,5 @@ cd ..
 rm NetConfServer -r
 
 
-echo "Netopeer2 and its components uninstalled"
+echo "Netopeer2 and its components uninstalled. If you want to reinstall, you first need to restart to clear SHM."
 exit 0

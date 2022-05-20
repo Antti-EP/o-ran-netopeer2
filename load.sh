@@ -1,3 +1,5 @@
+#!/bin/bash
+
 cd O-RAN.WG4.MP-YANGs-v08.00/
 cd Imported\ Models/
 #sysrepoctl -i ietf-yang-types.yang

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 sysrepoctl -u o-ran-fan
 sysrepoctl -u o-ran-fm
 sysrepoctl -u o-ran-supervision
@@ -42,10 +44,10 @@ sysrepoctl -u ietf-restconf
 #sysrepoctl -u ietf-yang-schema-mount
 #sysrepoctl -u ietf-yang-types
 #sysrepoctl -u ietf-yang-library
-sysrepoctl -u ietf-subscribed-notifications
-sysrepoctl -u ietf-network-instance
-sysrepoctl -u ietf-ip
-sysrepoctl -u ietf-interfaces
+#sysrepoctl -u ietf-subscribed-notifications
+#sysrepoctl -u ietf-network-instance
+#sysrepoctl -u ietf-ip
+#sysrepoctl -u ietf-interfaces
 #sysrepoctl -u ietf-netconf-acm
 sysrepoctl -u ietf-dhcpv6-types
 #sysrepoctl -u ietf-datastores
